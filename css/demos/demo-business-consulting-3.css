@@ -412,13 +412,13 @@ html {
 }
 
 
-/* #cooinputs .inps.active {
+#cooinputs .inps.active {
 	display: block;
 }
 
 #cooinputs .inps {
 	display: none;
-} */
+}
 
 .progressbar {
 	margin: 50px 0 50px 0;
@@ -467,13 +467,13 @@ html {
 }
 
 .progressbar li.active:before {
-	border-color: #55b776;
-	background-color: #55b776;
+	border-color: #f04c23;
+	background-color: #f04c23;
 	transition: all .8s;
 }
 
 .progressbar li.active:after {
-	background-color: #55b776;
+	background-color: #f04c23;
 	transition: all .8s;
 }
 

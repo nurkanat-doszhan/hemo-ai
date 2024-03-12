@@ -241,8 +241,8 @@
                 При отправке вашего сообщения произошла ошибка.
                 <span class="mail-error-message text-1 d-block"></span>
               </div>
-              <div id="cooinputs" class="row">
-                <div class="col-lg-6 inps active">
+              <div id="cooinputs" class="row mb-5">
+                <div class="col-lg-6 inps mx-auto active">
                   <div class="row">
                     <div class="form-group col">
                       <input type="text" value="" data-msg-required="Введите свой возраст" maxlength="100"
@@ -279,7 +279,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 inps">
+                <div class="col-lg-6 inps mx-auto">
                   <div class="row">
                     <div class="form-group col">
                       <input type="text" value="" data-msg-required="Введите свой возраст" maxlength="100"
@@ -316,7 +316,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 inps">
+                <div class="col-lg-6 inps mx-auto">
                   <div class="row">
                     <div class="form-group col">
                       <input type="text" value="" data-msg-required="Введите свой возраст" maxlength="100"
@@ -353,7 +353,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 inps">
+                <div class="col-lg-6 inps mx-auto">
                   <div class="row">
                     <div class="form-group col">
                       <input type="text" value="" data-msg-required="Введите свой возраст" maxlength="100"
@@ -390,7 +390,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 inps">
+                <div class="col-lg-6 inps mx-auto">
                   <div class="row">
                     <div class="form-group col">
                       <input type="text" value="" data-msg-required="Введите свой возраст" maxlength="100"
@@ -413,7 +413,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 inps">
+                <div class="col-lg-6 inps mx-auto">
                   <div class="row">
                     <div class="form-group col">
                       <input type="text" value="" data-msg-required="Укажите эритроциты, RBC, 10^12/л" maxlength="100"
@@ -436,19 +436,24 @@
                     </div>
                   </div>
                 </div>
-                <button
-                  class="btn btn-primary custom-btn-style-1 font-weight-semibold btn-px-4 btn-py-2 text-3-5 w-auto ms-auto"
-                  data-loading-text="Loading..." data-cursor-effect-hover="plus"
-                  data-cursor-effect-hover-color="light">
-                  <span>Отправить</span>
-                </button>
+                <div class="col-12 inps">
+                  <button
+                    class="btn btn-primary custom-btn-style-1 font-weight-semibold btn-px-4 btn-py-2 text-3-5 w-auto ms-auto"
+                    data-loading-text="Loading..." data-cursor-effect-hover="plus"
+                    data-cursor-effect-hover-color="light">
+                    <span>Отправить</span>
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                
               </div>
 
-              <div class="d-none row justify-content-between appear-animation animated fadeInUpShorter appear-animation-visible"
+              <div class="row justify-content-between appear-animation animated fadeInUpShorter appear-animation-visible"
                 data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1250"
                 style="animation-delay: 1250ms;">
                 <button id="Back"
-                  class="btn btn-primary custom-btn-style-1 font-weight-semibold btn-px-4 btn-py-2 text-3-5 w-auto d-none"
+                  class="btn btn-primary custom-btn-style-1 font-weight-semibold btn-px-4 btn-py-2 text-3-5 w-auto "
                   data-loading-text="Loading..." data-cursor-effect-hover="plus"
                   data-cursor-effect-hover-color="light">
                   <span>Пред.</span>
@@ -460,7 +465,7 @@
                   <span>След.</span>
                 </button>
               </div>
-              <div class="d-none row">
+              <div class=" row">
                 <div class="col">
                   <ul id="progress-bar" class="progressbar">
                     <li class="active"></li>
@@ -576,26 +581,20 @@
         $('#progress-bar li.active:last').removeClass('active');
       }
     }
-    var cooinputs = {
-      Bar: $('#cooinputs'),
-      Next: function () {
-        // $('#cooinputs .inps.d-none:first').removeClass('d-none').addClass('d-block');
-        // $('#cooinputs .inps.d-none').removeClass('d-block').addClass('d-none');
-        $('#cooinputs .inps:not(.active):first').addClass('active');
-        $('#Back').removeClass('d-none');
-      },
-      Back: function () {
-        // if (!$('#cooinputs .inps.d-block:last').hasClass('first')) {
-        $('#cooinputs .inps.active:last').removeClass('active');
-          // $('#cooinputs .inps.d-block:last').removeClass('d-block').addClass('d-none');
-        // }
-      },
-      // Reset: function () {
-      //   if (this.Bar) {
-      //     this.Bar.find('.inps').removeClass('d-block');
-      //   }
-      // },
+    let inps = document.getElementsByClassName('inps');
+    for (let i = 0; i < inps.length; i++) {
+      console.log(i);
     }
+    // var cooinputs = {
+    //   Bar: $('#cooinputs'),
+    //   Next: function () {
+    //     $('#cooinputs .inps:not(.active):first').addClass('active');
+    //     $('#Back').removeClass('d-none');
+    //   },
+    //   Back: function () {
+    //     $('#cooinputs .inps.active:last').removeClass('active');
+    //   },
+    // }
 
     // progressBar.Reset();
 
