@@ -579,17 +579,21 @@
     next.classList.add('disabled');
     next.setAttribute("title", "Заполните все поля");
     for (let i = 0; i < inps.length; i++) {
+      console.log(inps[currElem].children[i].children[0].childNodes[1]);
       // console.log(inps[currElem].children[i].children[0].children[0]);
       // console.log(inps[i]);
       inps[currElem].children[i].children[0].childNodes[1].onchange = function () {
-        console.log(inps[currElem].children[i].children[0].childNodes[1])
-        if (inps[currElem].children[i].children[0].childNodes[1].value == "") {
-          next.classList.add('disabled');
-        } else {
-          next.classList.remove('disabled');
+        for (var i = 0; i < inps[currElem].children[i].children[0].childNodes[1].length; i++) {
+
+          console.log(inps[currElem].children[i].children[0].childNodes[1].value)
         }
+        // if (inps[currElem].children[i].children[0].childNodes[1].value == "") {
+        //   next.classList.add('disabled');
+        // } else {
+        //   next.classList.remove('disabled');
+        // }
       }
-      currElem+=1;
+      // currElem+=1;
       // if (inps[currElem].children[i].children[0].children[0].value)
     }
     
